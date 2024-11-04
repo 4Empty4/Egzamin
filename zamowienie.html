@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8" />
+	<!-- Set the title of the page -->
+	<title>Zamówienia hurtowe</title>
+	<!-- Link to external CSS file for styling -->
+	<link rel="stylesheet" href="styl4.css" />
+</head>
+<body>
+<header>
+	<!-- Main title of the page -->
+	<h1>Sieci komputerowe</h1>
+</header>
+<main>
+	<!-- Left section for content and images -->
+	<section id="left">
+		<!-- Subheading for the section -->
+		<h2>Aktualizacja i zamówienia materiałów</h2>
+		<!-- Text indicating internal use for the company -->
+		<p>Do wewnętrznego użytku firmy</p>
+		<!-- Image with a description "computer network" -->
+		<img src="obraz.png" alt="sieć komputerowa" />
+	</section>
+	<!-- Right section containing the table with products -->
+	<section id="right">
+		<table>
+			<!-- Table header row defining columns for product information -->
+			<tr>
+				<th>Produkt</th>
+				<th>Jednostka</th>
+				<th>Dostępna ilość</th>
+				<th>Aktualizacja</th>
+				<th>Zamówienie</th>
+			</tr>
+			<!-- For beginners -->
+			<tr>
+				<!-- Product name -->
+				<td>Skrętka U/UTP drut</td>
+				<!-- Measurement unit -->
+				<td>metr</td>
+				<!-- Available quantity with ID for JavaScript reference -->
+				<td id="p1">20</td>
+				<!-- Button to update quantity, calls aktualizuj() function -->
+				<td><button onclick="aktualizuj('p1')">Aktualizuj</button></td>
+				<!-- Button to place an order, calls zamow() function -->
+				<td><button onclick="zamow('Skrętka U/UTP drut')">Zamów</button></td>
+			</tr>
+			<tr>
+				<td>Skrętka U/UTP linka</td>
+				<td>metr</td>
+				<td id="p2">2</td>
+				<td><button onclick="aktualizuj('p2')">Aktualizuj</button></td>
+				<td><button onclick="zamow('Skrętka U/UTP linka')">Zamów</button></td>
+			</tr>
+			<tr>
+				<td>Wtyki 8P8C</td>
+				<td>sztuki</td>
+				<td id="p3">10</td>
+				<td><button onclick="aktualizuj('p3')">Aktualizuj</button></td>
+				<td><button onclick="zamow('Wtyki 8P8C')">Zamów</button></td>
+			</tr>
+			<tr>
+				<td>Moduły Keystone</td>
+				<td>sztuki</td>
+				<td id="p4">30</td>
+				<td><button onclick="aktualizuj('p4')">Aktualizuj</button></td>
+				<td><button onclick="zamow('Moduły Keystone')">Zamów</button></td>
+			</tr>
+		</table>
+	</section>
+</main>
+<footer>
+	<!-- Link to the company's website, opens in a new tab -->
+	<a href="http://sieci.pl/" target="_blank">Nasza strona internetowa</a>
+	<!-- Footer text with author information -->
+	<p>Stronę przygotował</p>
+</footer>
+<!-- JavaScript file that contains functionality for updating and ordering -->
+<script src="main.js"></script>
+</body>
+</html>

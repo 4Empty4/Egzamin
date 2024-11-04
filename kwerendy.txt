@@ -1,0 +1,21 @@
+-- 1. Selects materials with their quantities and producer names,
+--    where the quantity is greater than 9.
+SELECT materialy.nazwa, materialy.ilosc, producenci.nazwaProd
+FROM materialy, producenci
+WHERE materialy.Producenci_id = producenci.id
+AND materialy.ilosc > 9;
+
+-- 2. Selects materials with their producer names and unit names
+--    by joining materials, producers, and units tables.
+SELECT materialy.nazwa, producenci.nazwaProd, jednostki.nazwaJedn
+FROM materialy, producenci, jednostki
+WHERE materialy.Producenci_id = producenci.id
+AND jednostki.id = materialy.Jednostki_id;
+
+-- 3. Creates a new user 'zaopatrzenie' with a specific password
+--    for accessing the database on localhost.
+CREATE USER 'zaopatrzenie'@'localhost' IDENTIFIED BY 'Z@op@trzenie';
+
+-- 4. Grants SELECT, UPDATE, INSERT, and DELETE permissions on the 'firma'
+--    database to the 'zaopatrzenie' user on localhost.
+GRANT SELECT, UPDATE, INSERT, DELETE ON firma.* TO 'zaopatrzenie'@'localhost';

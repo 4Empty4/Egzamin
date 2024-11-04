@@ -1,0 +1,76 @@
+/* Apply a Verdana font and center-align text for all elements */
+* {
+	font-family: Verdana;
+	text-align: center;
+}
+
+/* Remove default margin from the body */
+body {
+	margin: 0;
+}
+
+/* Style for the header section */
+header {
+	background-color: DarkGreen; /* Set background color to dark green */
+	color: white;                /* Set text color to white */
+	padding: 5px;                /* Add padding around content */
+}
+
+/* Style for the main container */
+main {
+	display: flex;                /* Use flex layout for main content */
+	background-color: PaleGreen;  /* Set background color to pale green */
+}
+
+/* Style for the left section */
+#left {
+	background-color: PaleGreen; /* Match main background color */
+	width: 30%;                  /* Set width to 30% */
+	height: 500px;               /* Fixed height */
+}
+
+/* Style for the right section */
+#right {
+	background-color: Honeydew; /* Set a lighter green background */
+	width: 70%;                 /* Set width to 70% */
+	height: 500px;              /* Fixed height */
+	padding-top: 100px;         /* Add top padding to align content */
+}
+
+/* Style for the footer section */
+footer {
+	background-color: PaleGreen; /* Set background color to pale green */
+	padding: 3px;                /* Add padding */
+}
+
+/* Style for tables and table cells */
+table,
+td {
+	border: 1px solid DarkGreen; /* Dark green border around table and cells */
+	border-collapse: collapse;   /* Remove spacing between table cells */
+}
+
+/* Style for the table as a whole */
+table {
+	margin: auto;       /* Center the table horizontally */
+	width: 95%;         /* Set table width to 95% of its container */
+}
+
+/* Style for table data and header cells */
+td,
+th {
+	padding: 20px 0;    /* Add vertical padding for cells */
+}
+
+/* Style for buttons */
+button {
+	background-color: DarkGreen; /* Set background color to dark green */
+	color: white;                /* Set text color to white */
+	padding: 5px;                /* Add padding */
+}
+
+/* Style for button hover effect */
+button:hover {
+	background-color: Honeydew;  /* Change background to light green */
+	color: DarkGreen;            /* Change text color to dark green */
+}

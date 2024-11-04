@@ -1,0 +1,61 @@
+HTML Structure
+
+The HTML document defines the structure for a company’s internal order management page. It includes headers, main content sections, and a footer, along with a table that lists various products available for update and order. The HTML elements are structured as follows:
+
+	1.	Header (<header>)
+	•	Contains the page title “Sieci komputerowe” for identification.
+	2.	Main Section (<main>)
+	•	Divided into two parts:
+	•	Left Section (#left): Displays a heading, description, and image related to computer networking. This section is designed for company use only.
+	•	Right Section (#right): Contains a table with product data.
+	3.	Table Structure (<table>)
+	•	Headers: Defines columns for “Product,” “Unit,” “Available Quantity,” “Update,” and “Order.”
+	•	Rows: Each product has its own row with:
+	•	Product name and unit
+	•	Quantity (using IDs like p1, p2, etc., for JavaScript reference)
+	•	Buttons for updating the quantity (aktualizuj()) and placing an order (zamow()).
+	4.	Footer (<footer>)
+	•	Includes a link to the company’s website and a credit line for the page’s creator.
+	5.	JavaScript Linking (<script src="main.js">)
+	•	Connects the JavaScript functionality from main.js for updating product quantities and placing orders.
+
+CSS Styling
+
+The CSS styles the page layout and interactive elements for a clear, user-friendly interface.
+
+	1.	Universal Styles (*)
+	•	Sets a Verdana font for all elements and centers the text.
+	2.	Body (body)
+	•	Removes the default margin to prevent spacing around the page content.
+	3.	Header (header)
+	•	Sets a dark green background with white text to distinguish the page title and creates a cohesive header style with padding.
+	4.	Main Layout (main)
+	•	Uses a flex layout to align the left and right sections side-by-side and applies a pale green background.
+	5.	Left Section (#left)
+	•	Has a width of 30% and a fixed height of 500px, matching the main background color.
+	6.	Right Section (#right)
+	•	Occupies 70% width, with a height of 500px and a padding at the top to space content vertically.
+	7.	Footer (footer)
+	•	Matches the main and left background colors with slight padding for spacing.
+	8.	Table and Cells (table, td)
+	•	Adds a dark green border around cells, collapses cell spacing, and sets the table width to 95% of its container with a centered alignment.
+	9.	Table Cells (td, th)
+	•	Adds vertical padding to cells for improved readability.
+	10.	Buttons (button)
+	•	Styled with a dark green background and white text. On hover, the button changes to a light green background with dark green text for visual feedback.
+
+JavaScript Functions
+
+The JavaScript code provides interactive functionality for updating product quantities and placing orders.
+
+	1.	sprawdz() Function
+	•	Iterates through a list of product IDs, retrieves the current quantity, and assigns background colors based on stock levels:
+	•	Red if quantity is zero.
+	•	Yellow if quantity is between 1 and 5.
+	•	Honeydew (light green) if quantity is above 5.
+	2.	aktualizuj(produktID) Function
+	•	Prompts the user to enter a new quantity for a specified product ID, updates the HTML element with this new value, and then calls sprawdz2() to refresh background colors based on the updated quantity.
+	3.	zamow(nazwaProduktu) Function
+	•	Displays an alert containing the current order number and product name, then increments the idZamowienia variable to uniquely identify subsequent orders.
+	4.	Initialization
+	•	The initial call to sprawdz() runs once the page loads, ensuring each product’s background color reflects its quantity when the page is first rendered.
